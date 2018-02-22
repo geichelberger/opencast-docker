@@ -18,6 +18,7 @@ set -e
 
 log "oc_uninstall" "Start uninstallation"
 
+sudo chown -R "${OPENCAST_BUILD_USER_UID}:${OPENCAST_BUILD_USER_GID}" "${OPENCAST_HOME}/"
 sudo rm -rf "${OPENCAST_HOME}"
 sudo mkdir -p "${OPENCAST_HOME}"
 sudo chown -R "${OPENCAST_USER}:${OPENCAST_GROUP}" "${OPENCAST_HOME}"
